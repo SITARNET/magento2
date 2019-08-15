@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sitarnet_Jobs::job_head" title="Jobs" module="Sitarnet_Jobs" sortOrder="100" resource="Sitarnet_Jobs::job_head" />
+        <add id="Sitarnet_Jobs::department" title="Departments" module="Sitarnet_Jobs" sortOrder="10" parent="Sitarnet_Jobs::job_head" action="jobs/department" resource="Sitarnet_Jobs::job" />
+        <add id="Sitarnet_Jobs::job" title="Jobs" module="Sitarnet_Jobs" sortOrder="20" parent="Sitarnet_Jobs::job_head" action="jobs/job" resource="Sitarnet_Jobs::job" />
+    </menu>
+</config>
