@@ -81,6 +81,20 @@
             </argument>
         </container>
 
+        <!-- Filter Search -->
+        <filterSearch name="fulltext">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="provider" xsi:type="string">jobs_department_listing.jobs_department_listing_data_source</item>
+                    <item name="chipsProvider" xsi:type="string">jobs_department_listing.jobs_department_listing.listing_top.listing_filters_chips</item>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="provider" xsi:type="string">jobs_department_listing.jobs_department_listing.listing_top.bookmarks</item>
+                        <item name="namespace" xsi:type="string">current.search</item>
+                    </item>
+                </item>
+            </argument>
+        </filterSearch>
+
         <!-- Filters -->
         <filters name="listing_filters">
             <argument name="data" xsi:type="array">
@@ -98,11 +112,11 @@
                 </item>
             </argument>
             <!-- Department ID Filter -->
-            <filterRange name="department_id">
+            <!--<filterRange name="department_id">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
-                        <item name="dataScope" xsi:type="string">entity_id</item> <!-- Column name in DB -->
-                        <item name="label" xsi:type="string" translate="true">ID</item> <!-- Label on grid -->
+                        <item name="dataScope" xsi:type="string">entity_id</item> Column name in DB
+                        <item name="label" xsi:type="string" translate="true">ID</item> Label on grid
                         <item name="childDefaults" xsi:type="array">
                             <item name="provider" xsi:type="string">jobs_department_listing.jobs_department_listing.listing_top.listing_filters</item>
                         </item>
@@ -126,31 +140,17 @@
                         </item>
                     </argument>
                 </filterInput>
-            </filterRange>
+            </filterRange>-->
             <!-- Department name Filter -->
-            <filterInput name="department_name">
+            <!--<filterInput name="department_name">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
-                        <item name="dataScope" xsi:type="string">name</item> <!-- Column name in DB -->
-                        <item name="label" xsi:type="string" translate="true">Name</item> <!-- Label on grid -->
+                        <item name="dataScope" xsi:type="string">name</item> Column name in DB
+                        <item name="label" xsi:type="string" translate="true">Name</item> Label on grid
                     </item>
                 </argument>
-            </filterInput>
+            </filterInput>-->
         </filters>
-
-        <!-- Filter Search -->
-        <filterSearch name="fulltext">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="provider" xsi:type="string">jobs_department_listing.jobs_department_listing_data_source</item>
-                    <item name="chipsProvider" xsi:type="string">jobs_department_listing.jobs_department_listing.listing_top.listing_filters_chips</item>
-                    <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">jobs_department_listing.jobs_department_listing.listing_top.bookmarks</item>
-                        <item name="namespace" xsi:type="string">current.search</item>
-                    </item>
-                </item>
-            </argument>
-        </filterSearch>
 
     </container>
 
