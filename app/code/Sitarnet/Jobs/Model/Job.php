@@ -5,7 +5,7 @@ use \Magento\Framework\Model\AbstractModel;
 
 class Job extends AbstractModel
 {
-    const JOB_ID = 'entity_id'; // We define the id fieldname
+    const JOB_ID = 'entity_id'; // We define the id field name
 
     /**
      * Prefix of model events names
@@ -46,4 +46,7 @@ class Job extends AbstractModel
         return 0;
     }
 
+    public function getAvailableStatuses() {
+        return [$this->getDisableStatus() => __('Disabled'), $this->getEnableStatus() => __('Enabled')];
+    }
 }
