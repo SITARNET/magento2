@@ -53,7 +53,7 @@ class Save extends Action
 
             $this->_eventManager->dispatch(
                 'jobs_department_prepare_save',
-                ['deparment' => $model, 'request' => $this->getRequest()]
+                ['department' => $model, 'request' => $this->getRequest()]
             );
 
             try {
