@@ -1,0 +1,12 @@
+@sitarnetjobs-icons-admin__font-name-path: '@{baseDir}fonts/SitarnetFonts/jobs';
+@sitarnetjobs-icons-admin__font-name : 'SitarnetJobs';
+.lib-font-face(
+  @family-name:@sitarnetjobs-icons-admin__font-name,
+  @font-path: @sitarnetjobs-icons-admin__font-name-path,
+  @font-weight: normal,
+  @font-style: normal
+);
+.admin__menu .item-job-head.parent.level-0 > a:before {
+  font-family: @sitarnetjobs-icons-admin__font-name;
+  content: "\e900";
+}
