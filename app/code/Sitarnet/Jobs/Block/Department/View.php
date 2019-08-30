@@ -8,6 +8,8 @@ class View extends \Magento\Framework\View\Element\Template
 
     protected $_job;
 
+    const LIST_JOBS_ENABLED = 'jobs/department/view_list';
+
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Sitarnet\Jobs\Model\Department $department
@@ -120,5 +122,12 @@ class View extends \Magento\Framework\View\Element\Template
         }
 
         return $this->getUrl('jobs/job/view', ['id' => $job->getId()]);
+    }
+
+    public function getConfigListJobs() {
+        return $this->_scopeConfig->getValue(
+            self::LIST_JOBS_ENABLED,
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
     }
 }
