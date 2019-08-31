@@ -26,7 +26,6 @@ class Collection extends AbstractCollection
                 'main_table.department_id = department.'.$department->getIdFieldName(),
                 array('department_name' => 'name')
             );
-
         return $this;
     }
 }
