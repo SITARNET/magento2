@@ -1,5 +1,5 @@
 <?php
-namespace Maxime\Jobs\Block\Department;
+namespace Sitarnet\Jobs\Block\Department;
 class View extends \Magento\Framework\View\Element\Template
 {
     protected $_jobCollection = null;
@@ -12,16 +12,16 @@ class View extends \Magento\Framework\View\Element\Template
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Maxime\Jobs\Model\Department $department
-     * @param \Maxime\Jobs\Model\Job $job
-     * @param \Maxime\Jobs\Helper\Data $helper
+     * @param \Sitarnet\Jobs\Model\Department $department
+     * @param \Sitarnet\Jobs\Model\Job $job
+     * @param \Sitarnet\Jobs\Helper\Data $helper
      * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Maxime\Jobs\Model\Department $department,
-        \Maxime\Jobs\Model\Job $job,
-        \Maxime\Jobs\Helper\Data $helper,
+        \Sitarnet\Jobs\Model\Department $department,
+        \Sitarnet\Jobs\Model\Job $job,
+        \Sitarnet\Jobs\Helper\Data $helper,
         array $data = []
     ) {
         $this->_department = $department;
