@@ -63,4 +63,19 @@
             <argument name="resourceModel" xsi:type="string">Sitarnet\Jobs\Model\ResourceModel\Job</argument>
         </arguments>
     </virtualType>
+
+    <!-- Logger and Handler -->
+    <type name="Sitarnet\Jobs\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Sitarnet\Jobs\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">sitarnetJobs</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Sitarnet\Jobs\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
